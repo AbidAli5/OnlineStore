@@ -1,1 +1,14 @@
-<h1>Products Lists Works</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let product of products">
+      <div class="card mb-4">
+        <img src="{{ product.image }}" class="card-img-top" alt="{{ product.title }}" />
+        <div class="card-body">
+          <h5 class="card-title">{{ product.title }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <a href="#" class="btn btn-primary" routerLink="/Shop/:id">Buy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

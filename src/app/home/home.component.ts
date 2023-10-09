@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ProductService } from '../product.service';
+import { Router } from '@angular/router';
+import { Product } from '../Product.model';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+  products: Product[]=[];
+  constructor(private productService: ProductService, private router:Router){}
+  ngOnInit() {
+    this.productService.getProducts().subscribe(products => this.products = products);
+  }
 }

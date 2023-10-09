@@ -1,0 +1,10 @@
+
+.card-text,.card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .card-img-top {
+    height: 250px; /* Set the desired height for the images */
+    object-fit: cover; /* Maintain image aspect ratio and cover container */
+  }

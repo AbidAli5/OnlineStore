@@ -14,8 +14,6 @@ export class ProductsListComponent implements OnInit{
   ngOnInit() {
     this.productService.getProducts().subscribe(products => this.products = products);
   }
-  navigateToProductDetails(productId: number) {
-    this.router.navigate([`/Shop/:${productId}`]);
-  }
+ 
 
 }

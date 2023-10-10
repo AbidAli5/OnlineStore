@@ -1,3 +1,4 @@
+import { ContactUSComponent } from './contact-us/contact-us.component';
 export interface Product{
     id : number,
     title : string,
@@ -7,4 +8,9 @@ export interface Product{
     vendor : string,
     price : number,
     image : string,
+    rating: string
+}
+export interface rating{
+    rate :number;
+    Count: number
 }

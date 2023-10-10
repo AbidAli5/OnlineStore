@@ -10,8 +10,8 @@ import { ShopComponent } from './shop/shop.component';
 const routes: Routes = [
   {path:'', component: HomeComponent},
   { path: 'products', component: ProductsListComponent },
-  {path:'Contact Us', component:ContactUSComponent},
-  {path:'About Us', component:AboutUsComponent},
+  {path:'ContactUs', component:ContactUSComponent},
+  {path:'AboutUs', component:AboutUsComponent},
   {path:'Shop/:id',component:ShopComponent}
 ];
 

@@ -9,7 +9,6 @@
   padding: 20px 0;
   text-align: center;
   width: 100%; /* Ensure it spans the entire width */
-  position: fixed;
 }
 
 .footer-menu ul {

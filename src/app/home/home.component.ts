@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ProductService } from '../product.service';
 import { Router } from '@angular/router';
 import { Product } from '../Product.model';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -14,4 +15,5 @@ export class HomeComponent {
   ngOnInit() {
     this.productService.getProducts().subscribe(products => this.products = products);
   }
+  
 }

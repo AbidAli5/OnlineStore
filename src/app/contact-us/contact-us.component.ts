@@ -7,21 +7,19 @@ import { FormBuilder,FormGroup } from '@angular/forms';
   styleUrls: ['./contact-us.component.css']
 })
 export class ContactUSComponent {
-  myForm: FormGroup;
-  formSubmitted(formData:any){
-    console.log(formData)
-  }
+  
+  myForm = this.fb.group({
+    name: '',
+    email: '',
+    message: ''
+  });
 
   constructor(private fb: FormBuilder) {
-    this.myForm = this.fb.group({
-      name: '',
-      email: '',
-      message: ''
-    });
   }
 
   onSubmit() {
     // Access the form data using this.myForm.value
+    // console.warn('Your order has been submitted', this.myForm.value);
     console.log(this.myForm.value);
   }
 

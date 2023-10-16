@@ -6,6 +6,7 @@ import { Product } from './Product.model';
   providedIn: 'root',
 })
 export class ProductService {
+  products : Product[]=[]
   private apiUrl =
     'https://fakestoreapi.com/products';
 
@@ -16,5 +17,8 @@ export class ProductService {
   getProductDetails(productId: number): Observable<Product> {
     const url = `${this.apiUrl}/${productId}`;
     return this.http.get<Product>(url);
+  }
+  addToCart(product: Product){
+    this.products.push(product);
   }
 }
